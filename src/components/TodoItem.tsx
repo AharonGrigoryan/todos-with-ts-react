@@ -1,4 +1,5 @@
 import { ITodo } from "../types/data";
+import "./style.css";
 
 interface ITodoItem extends ITodo {
   removeTodo: (id: number) => void;
@@ -9,32 +10,14 @@ const TodoItem: React.FC<ITodoItem> = (props) => {
   const { id, title, complete, removeTodo, toggleTodo } = props;
 
   return (
-    <div>
-      <input
-        type="checkbox"
-        checked={complete}
-        onChange={() => toggleTodo(id)}
-      />
-      <span
-        style={{
-          display: "inline-block",
-          margin: "0 10px",
-        }}
-      >
-        {title}
-      </span>
-
-      <button
-        onClick={() => removeTodo(id)}
-        style={{
-          background: "transparen",
-          border: "none",
-          outline: "none",
-          color: "red",
-        }}
-      >
-        x
-      </button>
+    <div className="tasks">
+      <div className="content">
+        <span style={{ textDecoration: complete ? "line-through" : "" ,
+       background: complete?"#4C0918":""
+      }}>{title}</span>
+      </div>
+      <button  onClick={() => toggleTodo(id)}>Done</button>
+      <button className="delete" onClick={() => removeTodo(id)}>X</button>
     </div>
   );
 };
