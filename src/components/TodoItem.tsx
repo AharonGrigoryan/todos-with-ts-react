@@ -1,5 +1,5 @@
 import { ITodo } from "../types/data";
-import "./style.css";
+import "./style/style.css"
 
 interface ITodoItem extends ITodo {
   removeTodo: (id: number) => void;
