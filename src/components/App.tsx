@@ -7,6 +7,17 @@ const App: React.FC = () => {
   const [value, setValue] = useState("");
   const [todos, setTodos] = useState<ITodo[]>([]);
 
+  // useEffect(() => {
+  //   const todos = JSON.parse(localStorage.getItem("todos") || "");
+  //   if (todos.length !== 0) {
+  //     setTodos(todos);
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   localStorage.setItem("todos", JSON.stringify(todos));
+  // }, [todos]);
+
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setValue(e.target.value);
   };
@@ -70,13 +81,13 @@ const App: React.FC = () => {
       </div>
       <div className="task-container">
         <span style={{ display: todos.length !== 0 ? "none" : "" }}>
-          Enter your first Todo
+        <h1> Todo is not defined</h1> 
         </span>
 
         <TodoList
           items={todos}
           removeTodo={removeTodo}
-          toggleTodo={toggleTodo}
+          doneTodo={toggleTodo}
         />
       </div>
     </div>

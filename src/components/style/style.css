@@ -16,7 +16,7 @@ body {
 
 .header {
     flex: 30%;
-    background-color: #D9F4EA;
+    background-color: #3F3B6C;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -35,7 +35,8 @@ body {
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
     padding-left: 10px;
-    background-color:#60C3CE;
+    background-color:#A3C7D6;
+    outline: none
    
 }
 
@@ -46,13 +47,13 @@ body {
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
 
-    background-color: #183033;
+    background-color: #9F73AB;
     cursor: pointer;
     color: white;
 }
 
 .task-container {
-    background-color: #54AAB4;
+    background-color: #624F82;
     flex: 70%;
     width: 100%;
     display: flex;
@@ -78,13 +79,14 @@ body {
 }
 
 .tasks .content span {
+    color: #624F82;
     display: grid;
     place-items: center;
     width: 100%;
     height: 100%;
     font-size: 18px;
     border-right: none;
-    background-color: #8AC5CA;
+    background-color: #A3C7D6;
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
 
@@ -93,7 +95,7 @@ body {
 .tasks .delete  {
     flex: 7%;
     border: none;
-    background-color: #4C0918;
+    background-color: #000000;
     border-bottom-right-radius: 8px; 
     border-top-right-radius: 8px; 
     color: white;
@@ -105,7 +107,7 @@ body {
     flex: 7%;
     height: 100%;
     border: none;
-    background-color:#183033;
+    background-color:#9F73AB;
     color: white;
     margin-left: 1px;
     cursor: pointer;
