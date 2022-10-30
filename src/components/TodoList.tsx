@@ -5,11 +5,11 @@ import { ITodo } from "../types/data";
 interface ITodoListProps {
   items: ITodo[];
   removeTodo: (id: number) => void;
-  toggleTodo: (id: number) => void;
+  doneTodo: (id: number) => void;
 }
 
 const TodoList: React.FC<ITodoListProps> = (props) => {
-  const { items, removeTodo, toggleTodo } = props;
+  const { items, removeTodo, doneTodo } = props;
   return (
       <div>
         {items.map((todo) => (
@@ -17,7 +17,7 @@ const TodoList: React.FC<ITodoListProps> = (props) => {
             key={todo.id}
             {...todo}
             removeTodo={removeTodo}
-            toggleTodo={toggleTodo}
+            doneTodo={doneTodo}
           />
         ))}
     </div>
